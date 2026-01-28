@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | E-Shop</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>🎉 Free shipping on orders over $50! • <span class="highlight">New users get 20% off</span></p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-store"></i>
+                        <span class="logo-text">E<span class="logo-highlight">Shop</span></span>
+                    </a>
+                </div>
+                <div class="user-actions">
+                    <a href="index.html" class="action-item">
+                        <i class="fas fa-home"></i>
+                        <span class="action-text">Home</span>
+                    </a>
+                    <a href="login.html" class="action-item">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span class="action-text">Login</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Registration Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <!-- Left Side: Role Selection -->
+                <div class="auth-left">
+                    <h1 class="auth-title">Join E-Shop</h1>
+                    <p class="auth-subtitle">Choose how you want to use our platform</p>
+                    
+                    <div class="role-selection">
+                        <div class="role-option active" data-role="buyer">
+                            <div class="role-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="role-info">
+                                <h3>Buyer Account</h3>
+                                <p>Shop products from various sellers</p>
+                            </div>
+                            <div class="role-check">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="role-option" data-role="seller">
+                            <div class="role-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="role-info">
+                                <h3>Seller Account</h3>
+                                <p>Sell your products to buyers worldwide</p>
+                            </div>
+                            <div class="role-check">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="role-benefits">
+                        <div class="benefits-content active" id="buyer-benefits">
+                            <h4><i class="fas fa-gift"></i> Buyer Perks:</h4>
+                            <ul>
+                                <li>Access to thousands of products</li>
+                                <li>Secure payment methods</li>
+                                <li>Order tracking</li>
+                                <li>Wishlist and favorites</li>
+                                <li>Customer support</li>
+                                <li>Discounts and coupons</li>
+                            </ul>
+                        </div>
+                        <div class="benefits-content" id="seller-benefits">
+                            <h4><i class="fas fa-chart-line"></i> Seller Benefits:</h4>
+                            <ul>
+                                <li>Free shop setup</li>
+                                <li>Product management tools</li>
+                                <li>Sales analytics</li>
+                                <li>Secure payments</li>
+                                <li>Customer messaging</li>
+                                <li>Marketing tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Registration Form -->
+                <div class="auth-right">
+                    <div class="auth-card">
+                        <h2 class="form-title">Create Account</h2>
+                        <p class="form-subtitle">Fill in your details</p>
+                        
+                        <form class="auth-form" id="registerForm">
+                            <!-- Basic Information -->
+                            <div class="form-section">
+                                <h3 class="section-title">Basic Information</h3>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-user"></i>
+                                            <input type="text" id="firstName" placeholder="First_name" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-user"></i>
+                                            <input type="text" id="lastName" placeholder="Last_name" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-envelope"></i>
+                                        <input type="email" id="email" placeholder="email@example.com" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-phone"></i>
+                                        <input type="tel" id="phone" placeholder="Phone_number">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Account Information -->
+                            <div class="form-section">
+                                <h3 class="section-title">Account Information</h3>
+                                
+                                <div class="form-group">
+                                    <label for="username">Username *</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-at"></i>
+                                        <input type="text" id="username" placeholder="Choose a username" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="password">Password *</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-lock"></i>
+                                            <input type="password" id="password" placeholder="Create password" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="confirmPassword">Confirm Password *</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-lock"></i>
+                                            <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Seller Additional Info (Hidden by default) -->
+                            <div class="form-section" id="sellerInfo" style="display: none;">
+                                <h3 class="section-title">Shop Information</h3>
+                                
+                                <div class="form-group">
+                                    <label for="shopName">Shop Name *</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-store"></i>
+                                        <input type="text" id="shopName" placeholder="Your shop name">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="shopCategory">Shop Category</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-tag"></i>
+                                        <select id="shopCategory">
+                                            <option value="">Select category</option>
+                                            <option value="fashion">Fashion</option>
+                                            <option value="electronics">Electronics</option>
+                                            <option value="home">Home & Garden</option>
+                                            <option value="sports">Sports</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Terms and Conditions -->
+                            <div class="form-group terms-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="terms" required>
+                                    <span>I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a></span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group terms-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter">
+                                    <span>Subscribe to our newsletter for updates and offers</span>
+                                </label>
+                            </div>
+                            
+                            <!-- Hidden role input -->
+                            <input type="hidden" id="selectedRole" value="buyer">
+                            
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-user-plus"></i> Create <span id="roleText">Buyer</span> Account
+                            </button>
+                            
+                            <div class="auth-footer">
+                                <p>Already have an account? <a href="login.html">Sign in here</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>E-Shop</h3>
+                    <p>Modern e-commerce platform for buyers and sellers.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 E-Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/register.js"></script>
+</body>
+</html>
