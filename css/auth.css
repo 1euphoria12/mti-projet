@@ -1,4 +1,4 @@
-/* ===== AUTHENTICATION STYLES ===== */
+
 .auth-section {
     min-height: 80vh;
     display: flex;
@@ -45,7 +45,7 @@
     margin-bottom: 40px;
 }
 
-/* Role Selection */
+
 .role-selection {
     display: flex;
     flex-direction: column;
@@ -114,7 +114,7 @@
     opacity: 1;
 }
 
-/* Role Description */
+
 .role-description {
     margin-top: auto;
     background: rgba(255,255,255,0.1);
@@ -163,7 +163,7 @@
     font-weight: bold;
 }
 
-/* Right Side Form */
+
 .auth-card {
     width: 100%;
     max-width: 400px;
@@ -238,6 +238,7 @@
     cursor: pointer;
     font-size: 18px;
     padding: 0;
+    
 }
 
 .form-options {
@@ -364,7 +365,7 @@
     text-decoration: underline;
 }
 
-/* Responsive Design */
+
 @media (max-width: 992px) {
     .auth-container {
         flex-direction: column;
@@ -405,7 +406,7 @@
         flex-direction: column;
     }
 }
-/* ===== REGISTRATION SPECIFIC STYLES ===== */
+
 .role-benefits {
     margin-top: auto;
     background: rgba(255,255,255,0.1);
@@ -450,7 +451,6 @@
     font-weight: bold;
 }
 
-/* Form Sections */
 .form-section {
     margin-bottom: 30px;
     padding-bottom: 20px;
@@ -479,7 +479,7 @@
     margin-bottom: 0;
 }
 
-/* Select Styling */
+
 .input-with-icon select {
     width: 100%;
     padding: 15px 15px 15px 50px;
@@ -498,8 +498,7 @@
     outline: none;
     box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
 }
-
-/* Terms Checkboxes */
+ 
 .terms-group {
     margin-bottom: 15px;
 }
@@ -518,10 +517,84 @@
     text-decoration: underline;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
     .form-row {
         flex-direction: column;
         gap: 25px;
     }
+} 
+
+.password-input-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-input-container .form-input {
+    width: 100%;
+    padding: 15px 50px 15px 20px; 
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background: #f8f9fa;
+}
+
+.password-input-container .form-input:focus {
+    border-color: #8f4a11;
+    background: white;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(143, 74, 17, 0.1);
+}
+
+
+.password-input-container .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    z-index: 100;
+    display: block !important; 
+}
+
+.password-input-container .toggle-password:hover {
+    color: #8f4a11;
+}
+
+
+.toggle-password {
+    position: relative; 
+    width: 30px; 
+    height: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-password i {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+}
+
+
+.toggle-password .fa-eye-slash {
+    opacity: 0;
+}
+
+/* When password is visible, hide eye, show eye-slash */
+.toggle-password.active .fa-eye {
+    opacity: 0;
+}
+
+.toggle-password.active .fa-eye-slash {
+    opacity: 1;
 }

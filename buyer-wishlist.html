@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist | E-Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-store"></i>
+                        <span class="logo-text">E<span class="logo-highlight">Shop</span></span>
+                    </a>
+                </div>
+
+                <nav class="buyer-nav">
+                    <a href="buyer-dashboard.html" class="nav-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="buyer-orders.html" class="nav-link">
+                        <i class="fas fa-shopping-bag"></i> My Orders
+                    </a>
+                    <a href="buyer-wishlist.html" class="nav-link active">
+                        <i class="fas fa-heart"></i> Wishlist
+                    </a>
+                    <a href="buyer-profile.html" class="nav-link">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                </nav>
+
+                <div class="user-actions">
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Welcome, Buyer!</span>
+                    </div>
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <section class="welcome-section">
+                <h1>My Wishlist</h1>
+                <p>Save items you love for later</p>
+            </section>
+
+            <div class="wishlist-header">
+                <div class="wishlist-info">
+                    <p><i class="fas fa-heart"></i> <strong>12 items</strong> in your wishlist</p>
+                </div>
+                <div class="wishlist-actions">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-share-alt"></i> Share List
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-shopping-cart"></i> Add All to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="wishlist-grid">
+                <div class="wishlist-item">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop" alt="Wireless Bluetooth Headphones">
+                        <span class="discount-badge">-20%</span>
+                        <button class="remove-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="item-details">
+                        <h3>Wireless Bluetooth Headphones</h3>
+                        <p class="item-category">Electronics</p>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5 (128 reviews)</span>
+                        </div>
+                        <p class="item-description">Noise cancelling over-ear headphones with 30-hour battery life</p>
+                        <div class="item-price">
+                            <span class="current-price">$89.99</span>
+                            <span class="original-price">$112.99</span>
+                        </div>
+                        <div class="item-stock">
+                            <i class="fas fa-check-circle"></i> In stock • Free shipping
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="btn-move-to-cart">
+                            <i class="fas fa-arrow-right"></i> Move to Cart
+                        </button>
+                        <button class="btn-save-for-later">
+                            <i class="fas fa-clock"></i> Save for Later
+                        </button>
+                    </div>
+                </div>
+
+                <div class="wishlist-item">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200&h=200&fit=crop" alt="Smart Watch Series 5">
+                        <button class="remove-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="item-details">
+                        <h3>Smart Watch Series 5</h3>
+                        <p class="item-category">Electronics</p>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0 (89 reviews)</span>
+                        </div>
+                        <p class="item-description">Fitness tracker with heart rate monitor and GPS</p>
+                        <div class="item-price">
+                            <span class="current-price">$199.99</span>
+                        </div>
+                        <div class="item-stock">
+                            <i class="fas fa-check-circle"></i> In stock
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="btn-move-to-cart">
+                            <i class="fas fa-arrow-right"></i> Move to Cart
+                        </button>
+                        <button class="btn-save-for-later">
+                            <i class="fas fa-clock"></i> Save for Later
+                        </button>
+                    </div>
+                </div>
+
+                <div class="wishlist-item">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=200&h=200&fit=crop" alt="Running Shoes Pro">
+                        <span class="out-of-stock">Out of Stock</span>
+                        <button class="remove-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="item-details">
+                        <h3>Running Shoes Pro</h3>
+                        <p class="item-category">Sports</p>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (42 reviews)</span>
+                        </div>
+                        <p class="item-description">Lightweight running shoes with extra cushioning</p>
+                        <div class="item-price">
+                            <span class="current-price">$75.50</span>
+                        </div>
+                        <div class="item-stock">
+                            <i class="fas fa-times-circle"></i> Out of stock • Restocking soon
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn-notify-me">
+                            <i class="fas fa-bell"></i> Notify When Available
+                        </button>
+                        <button class="btn-remove">
+                            <i class="fas fa-trash"></i> Remove
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommended-section">
+                <h2>Recommended for You</h2>
+                <div class="recommended-grid">
+                    <div class="product-card">
+                       <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=150&h=150&fit=crop" alt="Bluetooth Speaker">
+                        <div class="product-info">
+                            <h4>Bluetooth Speaker</h4>
+                            <p class="product-price">$45.99</p>
+                            <button class="btn-add-to-wishlist">
+                                <i class="far fa-heart"></i> Add to Wishlist
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=150&h=150&fit=crop" alt="Laptop Backpack">
+                        <div class="product-info">
+                            <h4>Laptop Backpack</h4>
+                            <p class="product-price">$34.99</p>
+                            <button class="btn-add-to-wishlist">
+                                <i class="far fa-heart"></i> Add to Wishlist
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1576243345690-4e4b79b63288?w=150&h=150&fit=crop" alt="Fitness Tracker">
+                        <div class="product-info">
+                            <h4>Fitness Tracker</h4>
+                            <p class="product-price">$79.99</p>
+                            <button class="btn-add-to-wishlist">
+                                <i class="far fa-heart"></i> Add to Wishlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>E-Shop</h3>
+                    <p>Modern e-commerce platform for buyers and sellers.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 E-Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/wishlist.js"></script>
+</body>
+</html>

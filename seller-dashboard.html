@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard | E-Shop</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Header for Seller -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-store"></i>
+                        <span class="logo-text">E<span class="logo-highlight">Shop</span></span>
+                    </a>
+                </div>
+
+                <!-- Seller Navigation -->
+                <nav class="seller-nav">
+                    <a href="seller-dashboard.html" class="nav-link active">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                    <a href="seller-products.html" class="nav-link">
+                        <i class="fas fa-box"></i> Products
+                    </a>
+                    <a href="seller-orders.html" class="nav-link">
+                        <i class="fas fa-shopping-bag"></i> Orders
+                    </a>
+                    <a href="seller-shop.html" class="nav-link">
+                        <i class="fas fa-store"></i> My Shop
+                    </a>
+                    <a href="seller-analytics.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i> Analytics
+                    </a>
+                </nav>
+
+                <!-- User Actions -->
+                <div class="user-actions">
+                    <div class="shop-info">
+                        <i class="fas fa-store"></i>
+                        <span>My Shop</span>
+                    </div>
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seller Dashboard Main Content -->
+    <main class="dashboard-main">
+        <div class="container">
+            <!-- Shop Header -->
+            <section class="shop-header">
+                <div class="shop-avatar">
+                    <i class="fas fa-store"></i>
+                </div>
+                <div class="shop-details">
+                    <h1>Fashion Store</h1>
+                    <p class="shop-rating">
+                        <i class="fas fa-star"></i> 4.5 (128 reviews)
+                        <span class="shop-status verified">Verified Shop</span>
+                    </p>
+                    <p class="shop-description">Premium fashion and accessories</p>
+                </div>
+                <div class="shop-actions">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add Product
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-cog"></i> Shop Settings
+                    </button>
+                </div>
+            </section>
+
+            <!-- Seller Stats -->
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #8f4a11;">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Total Revenue</h3>
+                        <p class="stat-number">$12,450</p>
+                        <p class="stat-desc">+15% from last month</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #4a2b03;">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Total Orders</h3>
+                        <p class="stat-number">156</p>
+                        <p class="stat-desc">24 pending orders</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e67e22;">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Total Products</h3>
+                        <p class="stat-number">48</p>
+                        <p class="stat-desc">5 low in stock</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #27ae60;">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Shop Rating</h3>
+                        <p class="stat-number">4.5/5.0</p>
+                        <p class="stat-desc">Based on 128 reviews</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Management Section -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Product Management</h3>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add New Product
+                    </button>
+                </div>
+                
+                <!-- Product Form -->
+                <div class="product-management">
+                    <form class="product-form" id="productForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="productName">Product Name *</label>
+                                <input type="text" id="productName" placeholder="Enter product name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="productCategory">Category *</label>
+                                <select id="productCategory" required>
+                                    <option value="">Select category</option>
+                                    <option value="fashion">Fashion</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="home">Home & Garden</option>
+                                    <option value="sports">Sports</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="productPrice">Price ($) *</label>
+                                <input type="number" id="productPrice" placeholder="0.00" step="0.01" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="productStock">Stock Quantity *</label>
+                                <input type="number" id="productStock" placeholder="0" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productDescription">Description</label>
+                            <textarea id="productDescription" placeholder="Describe your product..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Product Images</label>
+                            <div class="file-upload">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drag & drop images or click to browse</p>
+                                <p class="file-hint">Maximum 5 images, 2MB each</p>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-save"></i> Save Product
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Recent Products Table -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Your Products</h3>
+                    <a href="seller-products.html" class="view-all">View All</a>
+                </div>
+                
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=40&h=40&fit=crop" alt="Product">
+                                    <span>Wireless Headphones</span>
+                                </div>
+                            </td>
+                            <td>Electronics</td>
+                            <td>$89.99</td>
+                            <td>24</td>
+                            <td><span class="status-active">Active</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit">Edit</button>
+                                    <button class="btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&fit=crop" alt="Luxury Evening Dress">
+                                    <span>Summer Dress</span>
+                                </div>
+                            </td>
+                            <td>Fashion</td>
+                            <td>$45.50</td>
+                            <td>8</td>
+                            <td><span class="status-low">Low Stock</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit">Edit</button>
+                                    <button class="btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>E-Shop</h3>
+                    <p>Modern e-commerce platform for buyers and sellers.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 E-Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

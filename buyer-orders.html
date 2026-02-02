@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders | E-Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-store"></i>
+                        <span class="logo-text">E<span class="logo-highlight">Shop</span></span>
+                    </a>
+                </div>
+
+                <nav class="buyer-nav">
+                    <a href="buyer-dashboard.html" class="nav-link">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="buyer-orders.html" class="nav-link active">
+                        <i class="fas fa-shopping-bag"></i> My Orders
+                    </a>
+                    <a href="buyer-wishlist.html" class="nav-link">
+                        <i class="fas fa-heart"></i> Wishlist
+                    </a>
+                    <a href="buyer-profile.html" class="nav-link">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                </nav>
+
+                <div class="user-actions">
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Welcome, Buyer!</span>
+                    </div>
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <section class="welcome-section">
+                <h1>My Orders</h1>
+                <p>Track and manage all your purchases</p>
+            </section>
+
+            <div class="order-filter">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Orders</button>
+                    <button class="filter-tab" data-filter="pending">Pending</button>
+                    <button class="filter-tab" data-filter="shipped">Shipped</button>
+                    <button class="filter-tab" data-filter="delivered">Delivered</button>
+                    <button class="filter-tab" data-filter="cancelled">Cancelled</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search orders..." class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="orders-container">
+                <div class="order-card" data-status="delivered">
+                    <div class="order-header">
+                        <div class="order-info">
+                            <h3>Order #ORD-78945</h3>
+                            <p class="order-date">Placed on January 28, 2026</p>
+                            <p class="order-total">Total: $89.99</p>
+                        </div>
+                        <div class="order-status-badge status-delivered">
+                            Delivered
+                        </div>
+                    </div>
+
+                    <div class="order-items">
+                        <div class="order-item">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&h=80&fit=crop" alt="Product">
+                            <div class="item-details">
+                                <h4>Wireless Headphones</h4>
+                                <p>Quantity: 1</p>
+                                <p class="item-price">$89.99</p>
+                            </div>
+                            <div class="item-actions">
+                                <button class="btn btn-review" data-product="1">
+                                    <i class="fas fa-star"></i> Review
+                                </button>
+                                <button class="btn btn-reorder" data-product="1">
+                                    <i class="fas fa-redo"></i> Reorder
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-footer">
+                        <div class="order-actions">
+                            <button class="btn btn-details" data-order="78945">
+                                <i class="fas fa-file-invoice"></i> View Invoice
+                            </button>
+                            <button class="btn btn-support" data-order="78945">
+                                <i class="fas fa-headset"></i> Get Help
+                            </button>
+                        </div>
+                        
+                        <div class="order-shipping">
+                            <p><strong>Shipping Address:</strong> 123 Main St, New York, NY 10001</p>
+                            <p><strong>Estimated Delivery:</strong> February 2, 2026</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-card" data-status="processing">
+                    <div class="order-header">
+                        <div class="order-info">
+                            <h3>Order #ORD-78944</h3>
+                            <p class="order-date">Placed on January 27, 2026</p>
+                            <p class="order-total">Total: $199.99</p>
+                        </div>
+                        <div class="order-status-badge status-processing">
+                            Processing
+                        </div>
+                    </div>
+
+                    <div class="order-items">
+                        <div class="order-item">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" alt="Smart Watch">
+                            <div class="item-details">
+                                <h4>Smart Watch</h4>
+                                <p>Quantity: 1</p>
+                                <p class="item-price">$199.99</p>
+                            </div>
+                            <div class="item-actions">
+                                <button class="btn btn-cancel" data-order="78944">
+                                    <i class="fas fa-times"></i> Cancel Order
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-footer">
+                        <div class="order-actions">
+                            <button class="btn btn-details" data-order="78944">
+                                <i class="fas fa-file-invoice"></i> View Invoice
+                            </button>
+                            <button class="btn btn-support" data-order="78944">
+                                <i class="fas fa-headset"></i> Get Help
+                            </button>
+                        </div>
+                        
+                        <div class="order-shipping">
+                            <p><strong>Shipping Address:</strong> 123 Main St, New York, NY 10001</p>
+                            <p><strong>Estimated Delivery:</strong> February 5, 2026</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-card" data-status="shipped">
+                    <div class="order-header">
+                        <div class="order-info">
+                            <h3>Order #ORD-78943</h3>
+                            <p class="order-date">Placed on January 25, 2026</p>
+                            <p class="order-total">Total: $75.50</p>
+                        </div>
+                        <div class="order-status-badge status-shipped">
+                            Shipped
+                        </div>
+                    </div>
+
+                    <div class="order-items">
+                        <div class="order-item">
+                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop" alt="Shoes">
+                            <div class="item-details">
+                                <h4>Shoes</h4>
+                                <p>Quantity: 1</p>
+                                <p class="item-price">$75.50</p>
+                            </div>
+                            <div class="item-actions">
+                                <button class="btn btn-track" data-order="78943">
+                                    <i class="fas fa-map-marker-alt"></i> Track Package
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-footer">
+                        <div class="order-actions">
+                            <button class="btn btn-details" data-order="78943">
+                                <i class="fas fa-file-invoice"></i> View Invoice
+                            </button>
+                            <button class="btn btn-support" data-order="78943">
+                                <i class="fas fa-headset"></i> Get Help
+                            </button>
+                        </div>
+                        
+                        <div class="order-shipping">
+                            <p><strong>Shipping Address:</strong> 123 Main St, New York, NY 10001</p>
+                            <p><strong>Estimated Delivery:</strong> January 30, 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">
+                    Next <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>E-Shop</h3>
+                    <p>Modern e-commerce platform for buyers and sellers.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 E-Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/orders.js"></script>
+</body>
+</html>

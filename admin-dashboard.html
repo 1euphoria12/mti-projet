@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | E-Shop</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Header for Admin -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-store"></i>
+                        <span class="logo-text">E<span class="logo-highlight">Shop</span></span>
+                    </a>
+                </div>
+
+                <!-- Admin Navigation -->
+                <nav class="admin-nav">
+                    <a href="admin-dashboard.html" class="nav-link active">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                    <a href="admin-users.html" class="nav-link">
+                        <i class="fas fa-users"></i> Users
+                    </a>
+                    <a href="admin-shops.html" class="nav-link">
+                        <i class="fas fa-store"></i> Shops
+                    </a>
+                    <a href="admin-products.html" class="nav-link">
+                        <i class="fas fa-box"></i> Products
+                    </a>
+                    <a href="admin-orders.html" class="nav-link">
+                        <i class="fas fa-shopping-bag"></i> Orders
+                    </a>
+                    <a href="admin-settings.html" class="nav-link">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                </nav>
+
+                <!-- User Actions -->
+                <div class="user-actions">
+                    <div class="admin-info">
+                        <i class="fas fa-crown"></i>
+                        <span>Administrator</span>
+                    </div>
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Dashboard Main Content -->
+    <main class="dashboard-main">
+        <div class="container">
+            <!-- Admin Header -->
+            <section class="admin-header">
+                <h1>Admin Dashboard</h1>
+                <p>Manage platform users, shops, products, and monitor system health</p>
+            </section>
+
+            <!-- Admin Stats -->
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #8f4a11;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Total Users</h3>
+                        <p class="stat-number">1,245</p>
+                        <p class="stat-desc">+42 this week</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #4a2b03;">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Active Shops</h3>
+                        <p class="stat-number">89</p>
+                        <p class="stat-desc">12 pending verification</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e67e22;">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Today's Orders</h3>
+                        <p class="stat-number">156</p>
+                        <p class="stat-desc">$4,850 revenue</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #27ae60;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Platform Revenue</h3>
+                        <p class="stat-number">$48,250</p>
+                        <p class="stat-desc">+18% from last month</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platform Management Grid -->
+            <div class="dashboard-grid">
+                <!-- User Management -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Recent Users</h3>
+                        <a href="admin-users.html" class="view-all">Manage All</a>
+                    </div>
+                    
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Type</th>
+                                <th>Joined</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face" alt="User">
+                                        <div>
+                                            <strong>Jeon milka</strong>
+                                            <small>Milka@email.com</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge buyer">Buyer</span></td>
+                                <td>Today</td>
+                                <td><span class="status-active">Active</span></td>
+                                <td>
+                                    <button class="btn-view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="User">
+                                        <div>
+                                            <strong>Sarah Smith</strong>
+                                            <small>sarah@email.com</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge seller">Seller</span></td>
+                                <td>2 days ago</td>
+                                <td><span class="status-pending">Pending</span></td>
+                                <td>
+                                    <button class="btn-verify">Verify</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" alt="User">
+                                        <div>
+                                            <strong>Jennifer Aniston</strong>
+                                            <small>jennykim@email.com</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge seller">Seller</span></td>
+                                <td>1 week ago</td>
+                                <td><span class="status-active">Active</span></td>
+                                <td>
+                                    <button class="btn-view">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Shop Approvals -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Shop Approvals</h3>
+                        <span class="pending-count">3 pending</span>
+                    </div>
+                    
+                    <div class="approval-list">
+                        <div class="approval-item">
+                            <div class="shop-info">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Modern Electronics">
+                                <div>
+                                    <h4>Tech Gadgets Store</h4>
+                                    <p>Electronics • 15 products</p>
+                                    <small>Applied: Jan 28, 2026</small>
+                                </div>
+                            </div>
+                            <div class="approval-actions">
+                                <button class="btn-approve">
+                                    <i class="fas fa-check"></i> Approve
+                                </button>
+                                <button class="btn-reject">
+                                    <i class="fas fa-times"></i> Reject
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="approval-item">
+                            <div class="shop-info">
+                                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=300&fit=crop" alt="Trendy Fashion">
+                                <div>
+                                    <h4>Fashion Boutique</h4>
+                                    <p>Clothing • 28 products</p>
+                                    <small>Applied: Jan 27, 2026</small>
+                                </div>
+                            </div>
+                            <div class="approval-actions">
+                                <button class="btn-approve">
+                                    <i class="fas fa-check"></i> Approve
+                                </button>
+                                <button class="btn-reject">
+                                    <i class="fas fa-times"></i> Reject
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="approval-item">
+                            <div class="shop-info">
+                              <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=400&h=300&fit=crop" alt="Home & Garden">
+                                <div>
+                                    <h4>Home Decor Shop</h4>
+                                    <p>Home & Garden • 12 products</p>
+                                    <small>Applied: Jan 26, 2026</small>
+                                </div>
+                            </div>
+                            <div class="approval-actions">
+                                <button class="btn-approve">
+                                    <i class="fas fa-check"></i> Approve
+                                </button>
+                                <button class="btn-reject">
+                                    <i class="fas fa-times"></i> Reject
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Health -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>System Health</h3>
+                        <span class="health-status good">All Systems OK</span>
+                    </div>
+                    
+                    <div class="system-metrics">
+                        <div class="metric">
+                            <div class="metric-info">
+                                <span class="metric-label">Server Uptime</span>
+                                <span class="metric-value">99.8%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 99.8%"></div>
+                            </div>
+                        </div>
+
+                        <div class="metric">
+                            <div class="metric-info">
+                                <span class="metric-label">Database Usage</span>
+                                <span class="metric-value">64%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 64%"></div>
+                            </div>
+                        </div>
+
+                        <div class="metric">
+                            <div class="metric-info">
+                                <span class="metric-label">API Response Time</span>
+                                <span class="metric-value">128ms</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="metric">
+                            <div class="metric-info">
+                                <span class="metric-label">Active Sessions</span>
+                                <span class="metric-value">342</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 68%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="system-actions">
+                        <button class="btn-system">
+                            <i class="fas fa-redo"></i> Clear Cache
+                        </button>
+                        <button class="btn-system">
+                            <i class="fas fa-database"></i> Backup Now
+                        </button>
+                        <button class="btn-system">
+                            <i class="fas fa-chart-bar"></i> View Logs
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Recent Activities -->
+                <div class="dashboard-card full-width">
+                    <div class="card-header">
+                        <h3>Recent Activities</h3>
+                        <a href="admin-logs.html" class="view-all">View Logs</a>
+                    </div>
+                    
+                    <div class="activity-log">
+                        <div class="activity-item">
+                            <div class="activity-icon success">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p><strong>New user registered:</strong> Emma Wilson (Buyer)</p>
+                                <small>5 minutes ago</small>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p><strong>Product reported:</strong> "Wireless Headphones" - Review pending</p>
+                                <small>1 hour ago</small>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon info">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p><strong>Shop created:</strong> "Sports Gear Pro" by Mark Taylor</p>
+                                <small>3 hours ago</small>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon success">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p><strong>Order completed:</strong> #ORD-78945 - $89.99</p>
+                                <small>5 hours ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Admin Actions -->
+            <div class="quick-admin-actions">
+                <h3>Quick Actions</h3>
+                <div class="action-buttons-grid">
+                    <button class="admin-action-btn">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Add New Admin</span>
+                    </button>
+                    <button class="admin-action-btn">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Send Announcement</span>
+                    </button>
+                    <button class="admin-action-btn">
+                        <i class="fas fa-ban"></i>
+                        <span>Ban User</span>
+                    </button>
+                    <button class="admin-action-btn">
+                        <i class="fas fa-file-export"></i>
+                        <span>Export Data</span>
+                    </button>
+                    <button class="admin-action-btn">
+                        <i class="fas fa-cogs"></i>
+                        <span>System Settings</span>
+                    </button>
+                    <button class="admin-action-btn">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Support Tickets</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>E-Shop</h3>
+                    <p>Modern e-commerce platform for buyers and sellers.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 E-Shop. All rights reserved.</p>
+                <p class="admin-footer-note">
+                    <i class="fas fa-shield-alt"></i> Admin Panel v2.1 • Last updated: Today 18:30
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

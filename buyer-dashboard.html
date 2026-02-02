@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Dashboard | E-Shop</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Header for Buyer -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-store"></i>
+                        <span class="logo-text">E<span class="logo-highlight">Shop</span></span>
+                    </a>
+                </div>
+
+                <!-- Buyer Navigation -->
+                <nav class="buyer-nav">
+                    <a href="buyer-dashboard.html" class="nav-link active">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <a href="buyer-orders.html" class="nav-link">
+                        <i class="fas fa-shopping-bag"></i> My Orders
+                    </a>
+                    <a href="buyer-wishlist.html" class="nav-link">
+                        <i class="fas fa-heart"></i> Wishlist
+                    </a>
+                    <a href="buyer-profile.html" class="nav-link">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                </nav>
+
+                <!-- User Actions -->
+                <div class="user-actions">
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Welcome, Buyer!</span>
+                    </div>
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Buyer Dashboard Main Content -->
+    <main class="dashboard-main">
+        <div class="container">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <h1>Welcome to Your Dashboard</h1>
+                <p>Track your orders, manage wishlist, and update your profile</p>
+            </section>
+
+            <!-- Stats Cards -->
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #8f4a11;">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Active Orders</h3>
+                        <p class="stat-number">3</p>
+                        <p class="stat-desc">2 pending, 1 shipped</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #4a2b03;">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Wishlist Items</h3>
+                        <p class="stat-number">12</p>
+                        <p class="stat-desc">Saved for later</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e67e22;">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Your Reviews</h3>
+                        <p class="stat-number">7</p>
+                        <p class="stat-desc">Product ratings</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #27ae60;">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Available Coupons</h3>
+                        <p class="stat-number">2</p>
+                        <p class="stat-desc">Special discounts</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Orders & Quick Actions -->
+            <div class="dashboard-grid">
+                <!-- Recent Orders -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Recent Orders</h3>
+                        <a href="buyer-orders.html" class="view-all">View All</a>
+                    </div>
+                    <div class="orders-list">
+                        <div class="order-item">
+                            <div class="order-info">
+                                <h4>Wireless Headphones</h4>
+                                <p>Order #ORD-78945 • Jan 28, 2026</p>
+                            </div>
+                            <div class="order-status status-shipped">
+                                Shipped
+                            </div>
+                            <div class="order-price">$89.99</div>
+                        </div>
+
+                        <div class="order-item">
+                            <div class="order-info">
+                                <h4>Smart Watch</h4>
+                                <p>Order #ORD-78944 • Jan 27, 2026</p>
+                            </div>
+                            <div class="order-status status-processing">
+                                Processing
+                            </div>
+                            <div class="order-price">$199.99</div>
+                        </div>
+
+                        <div class="order-item">
+                            <div class="order-info">
+                                <h4>Running Shoes</h4>
+                                <p>Order #ORD-78943 • Jan 25, 2026</p>
+                            </div>
+                            <div class="order-status status-delivered">
+                                Delivered
+                            </div>
+                            <div class="order-price">$75.50</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Quick Actions</h3>
+                    </div>
+                    <div class="quick-actions">
+                        <a href="#" class="action-btn">
+                            <i class="fas fa-search"></i>
+                            <span>Browse Products</span>
+                        </a>
+                        <a href="buyer-wishlist.html" class="action-btn">
+                            <i class="fas fa-heart"></i>
+                            <span>View Wishlist</span>
+                        </a>
+                        <a href="#" class="action-btn">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Update Address</span>
+                        </a>
+                        <a href="#" class="action-btn">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Payment Methods</span>
+                        </a>
+                        <a href="#" class="action-btn">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Help Center</span>
+                        </a>
+                        <a href="#" class="action-btn">
+                            <i class="fas fa-cog"></i>
+                            <span>Account Settings</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recommended Products -->
+                <div class="dashboard-card full-width">
+                    <div class="card-header">
+                        <h3>Recommended For You</h3>
+                        <a href="#" class="view-all">See More</a>
+                    </div>
+                    <div class="recommended-products">
+                        <div class="product-card">
+                            <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=150&h=150&fit=crop" alt="Bluetooth Speaker">
+                            <div class="product-info">
+                                <h4>Bluetooth Speaker</h4>
+                                <p class="product-price">$45.99</p>
+                                <button class="btn-add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=150&h=150&fit=crop" alt="Laptop Backpack">
+                            <div class="product-info">
+                                <h4>Laptop Backpack</h4>
+                                <p class="product-price">$34.99</p>
+                                <button class="btn-add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="https://images.unsplash.com/photo-1576243345690-4e4b79b63288?w=150&h=150&fit=crop" alt="Fitness Tracker">
+                            <div class="product-info">
+                                <h4>Fitness Tracker</h4>
+                                <p class="product-price">$79.99</p>
+                                <button class="btn-add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>E-Shop</h3>
+                    <p>Modern e-commerce platform for buyers and sellers.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 E-Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

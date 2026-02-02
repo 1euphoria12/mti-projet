@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Products | E-Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-store"></i>
+                        <span class="logo-text">E<span class="logo-highlight">Shop</span></span>
+                    </a>
+                </div>
+
+                <nav class="seller-nav">
+                    <a href="seller-dashboard.html" class="nav-link">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                    <a href="seller-products.html" class="nav-link active">
+                        <i class="fas fa-box"></i> Products
+                    </a>
+                    <a href="seller-orders.html" class="nav-link">
+                        <i class="fas fa-shopping-bag"></i> Orders
+                    </a>
+                    <a href="seller-shop.html" class="nav-link">
+                        <i class="fas fa-store"></i> My Shop
+                    </a>
+                    <a href="seller-analytics.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i> Analytics
+                    </a>
+                </nav>
+
+                <div class="user-actions">
+                    <div class="shop-info">
+                        <i class="fas fa-store"></i>
+                        <span>Fashion Store</span>
+                    </div>
+                    <a href="index.html" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <section class="welcome-section">
+                <h1>Product Management</h1>
+                <p>Manage your products and inventory</p>
+            </section>
+
+            <div class="products-header">
+                <div class="products-stats">
+                    <div class="stat-box">
+                        <h3>48</h3>
+                        <p>Total Products</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>5</h3>
+                        <p>Low Stock</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>3</h3>
+                        <p>Out of Stock</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>156</h3>
+                        <p>Total Sales</p>
+                    </div>
+                </div>
+                <div class="products-actions">
+                    <button class="btn btn-primary" id="addProductBtn">
+                        <i class="fas fa-plus"></i> Add New Product
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Export Products
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-filter"></i> Filter
+                    </button>
+                </div>
+            </div>
+
+            <div class="products-table-container">
+                <table class="products-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox" id="selectAll">
+                            </th>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Status</th>
+                            <th>Sales</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="product-checkbox">
+                            </td>
+                            <td>
+                                <div class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=50&h=50&fit=crop" alt="Product">
+                                    <div>
+                                        <strong>Wireless Headphones</strong>
+                                        <small>SKU: WH-001</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Electronics</td>
+                            <td>$89.99</td>
+                            <td>
+                                <div class="stock-indicator">
+                                    <span class="stock-value">24</span>
+                                    <div class="stock-bar">
+                                        <div class="stock-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="status-active">Active</span></td>
+                            <td>45 sales</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                    <button class="btn-view"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="product-checkbox">
+                            </td>
+                            <td>
+                                <div class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=900&fit=crop" alt="White Linen Summer Dress">
+                                    <div>
+                                        <strong>Summer Dress</strong>
+                                        <small>SKU: SD-202</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Fashion</td>
+                            <td>$45.50</td>
+                            <td>
+                                <div class="stock-indicator">
+                                    <span class="stock-value">8</span>
+                                    <div class="stock-bar">
+                                        <div class="stock-fill low" style="width: 20%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="status-low">Low Stock</span></td>
+                            <td>28 sales</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                    <button class="btn-view"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="product-checkbox">
+                            </td>
+                            <td>
+                                <div class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=400&fit=crop" alt="Nike Running Shoes">
+                                    <div>
+                                        <strong>Running Shoes</strong>
+                                        <small>SKU: RS-303</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Sports</td>
+                            <td>$75.50</td>
+                            <td>
+                                <div class="stock-indicator">
+                                    <span class="stock-value">0</span>
+                                    <div class="stock-bar">
+                                        <div class="stock-fill out" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="status-out">Out of Stock</span></td>
+                            <td>12 sales</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                    <button class="btn-view"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bulk-actions">
+                <select class="bulk-select">
+                    <option value="">Bulk Actions</option>
+                    <option value="activate">Activate Selected</option>
+                    <option value="deactivate">Deactivate Selected</option>
+                    <option value="delete">Delete Selected</option>
+                    <option value="update-price">Update Price</option>
+                    <option value="update-stock">Update Stock</option>
+                </select>
+                <button class="btn btn-apply">Apply</button>
+                <span class="selected-count">0 products selected</span>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">Next <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="addProductModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Product</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="newProductForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Product Name *</label>
+                            <input type="text" placeholder="Enter product name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>SKU *</label>
+                            <input type="text" placeholder="Product SKU" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea placeholder="Product description..." rows="3"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Price *</label>
+                            <input type="number" placeholder="0.00" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Stock Quantity *</label>
+                            <input type="number" placeholder="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Category *</label>
+                            <select required>
+                                <option value="">Select category</option>
+                                <option value="fashion">Fashion</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="home">Home & Garden</option>
+                                <option value="sports">Sports</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Product Images</label>
+                        <div class="file-upload-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag & drop images here or click to browse</p>
+                            <p class="file-hint">Maximum 5 images, 2MB each</p>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>E-Shop</h3>
+                    <p>Modern e-commerce platform for buyers and sellers.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 E-Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
